@@ -1,0 +1,52 @@
+@startuml
+
+  package  {
+    package hardware {
+      class Cpu {
+          + maxCPU : double
+          + alertLevel : double
+          + usingCPU : double
+          + restCPU : double
+          + modeloCPU : String
+          {static} + print()
+          + modeloCpu()
+          + usedCpuPercent()
+          + cpuFrequency()
+      }
+    }
+  }
+  
+
+  package  {
+    package hardware {
+      class Disco {
+          + totalDisco()
+          + usoDisco()
+          + disponivelDisco()
+          + freeDiskPercent()
+      }
+    }
+  }
+  
+
+  package  {
+    package hardware {
+      class Ram {
+          + maxRAM : String
+          + alertLevel : double
+          + usingRAM : String
+          + restRAM : double
+          + totalRam : double
+          + usoRam : double
+          {static} + print()
+          + totalRam()
+          + usoRam()
+          + avaibleRam()
+          + freeRamPercent()
+          + alertRAMOK()
+      }
+    }
+  }
+
+
+@enduml

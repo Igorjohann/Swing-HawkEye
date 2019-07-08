@@ -1,0 +1,45 @@
+@startuml
+  package  {
+    package database {
+      class Database {
+          - dt : DateTimeFormatter
+          - tm : DateTimeFormatter
+          - now : LocalDateTime
+          - sistemaOperacional : String
+          - nomeMaquina : String
+          - setor : String
+          - alertaCPU : String
+          - alertaRAM : String
+          - alertaDisco : String
+          - usuario : String
+          - dataLeitura : String[]
+          - connectionUrl : String
+          + selectIdEmpresa()
+          + selectMaquina()
+          + selectMaquina1()
+          + insertMaquina()
+          + insertComponente()
+          + getConnectionUrl()
+          + getDt()
+          + setDt()
+          + getTm()
+          + setTm()
+          + getNow()
+          + setNow()
+          + getAlertaDisco()
+          + setAlertaDisco()
+          + getAlertaCpu()
+          + setAlertaCpu()
+          + getAlertaRam()
+          + setAlertaRam()
+          + getSistemaOperacional()
+          + setSistemaOperacional()
+          + getNomeMaquina()
+          + setNomeMaquina()
+          + getSetor()
+          + setSetor()
+      }
+    }
+  }
+  Database o-- Encrypt : crypto
+@enduml

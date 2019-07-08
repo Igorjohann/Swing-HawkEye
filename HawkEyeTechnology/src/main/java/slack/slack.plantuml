@@ -1,0 +1,65 @@
+@startuml
+  package  {
+    package slack {
+      class Slack {
+          + user : String
+          + sendMessage()
+      }
+    }
+  }
+  
+
+  package  {
+    package slack {
+      class SlackMessage {
+          - channel : String
+          - username : String
+          - text : String
+          - icon_emoji : String
+          {static} + builder()
+          + getChannel()
+          + getUsername()
+          + getText()
+          + getIcon_emoji()
+          + SlackMessage()
+          + setChannel()
+          + setUsername()
+          + setText()
+          + setIcon_emoji()
+      }
+    }
+  }
+  
+
+  package  {
+    package slack {
+      class Builder {
+          - channel : String
+          - username : String
+          - text : String
+          - icon_emoji : String
+          ~ Builder()
+          + channel()
+          + username()
+          + text()
+          + icon_emoji()
+          + build()
+          + toString()
+      }
+    }
+  }
+  
+
+  package  {
+    package slack {
+      class SlackUtils {
+          {static} - slackWebhookUrl : String
+          {static} + sendMessage()
+      }
+    }
+  }
+  
+
+  SlackMessage -up-|> Serializable
+  SlackMessage +-down- Builder
+@enduml

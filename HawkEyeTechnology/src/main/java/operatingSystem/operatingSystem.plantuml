@@ -1,0 +1,34 @@
+@startuml
+  package  {
+    package operatingSystem {
+      class Information {
+          + continuousInsert()
+      }
+    }
+  }
+  
+
+  package  {
+    package operatingSystem {
+      class Processos {
+          {static} - systemInfo : SystemInfo
+          {static} + getProcessesAsStringTable()
+          {static} + getOs()
+          {static} + getHardware()
+          {static} + getCpu()
+          {static} + getProcesses()
+          {static} + getProcesses()
+          {static} + getMemory()
+      }
+    }
+  }
+  
+
+  package  {
+    package operatingSystem {
+      class Teste {
+          {static} + main()
+      }
+    }
+  }
+@enduml

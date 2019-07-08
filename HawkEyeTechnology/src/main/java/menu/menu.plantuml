@@ -1,0 +1,11 @@
+@startuml
+  package  {
+    package menu {
+      class Init {
+          {static} + si : SystemInfo
+          {static} + hal : HardwareAbstractionLayer
+          {static} + os : OperatingSystem
+      }
+    }
+  }
+@enduml

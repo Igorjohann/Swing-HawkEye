@@ -1,0 +1,15 @@
+@startuml
+  package  {
+    package appLogs {
+      class Logger {
+          ~ date : Date
+          + tipoLog : String
+          + user : String
+          + os : String
+          + startLog()
+          + closeLog()
+          + usageAlertLog()
+      }
+    }
+  }
+@enduml

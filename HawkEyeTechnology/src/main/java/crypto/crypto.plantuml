@@ -1,0 +1,9 @@
+@startuml
+  package  {
+    package crypto {
+      class Encrypt {
+          + singleID()
+      }
+    }
+  }
+@enduml
